@@ -39,8 +39,10 @@ const Register = () => {
         <Button disabled={pending} type="submit" color="warning" className="w-full font-semibold">
           Register
         </Button>{" "}
-        {state.errors.map((error) => (
-          <p className="text-red-500">{error}</p>
+        {state.errors.map((error, index) => (
+          <p key={index} className="text-red-500">
+            {error}
+          </p>
         ))}
         <p className="text-black/80">
           Already have an account?{" "}

@@ -45,7 +45,12 @@ const Login = () => {
         <Button type="submit" color="warning" className="w-full font-semibold">
           Login
         </Button>
-        {errors && errors.map((error) => <p className="text-red-500">{error}</p>)}
+        {errors &&
+          errors.map((error, index) => (
+            <p key={index} className="text-red-500">
+              {error}
+            </p>
+          ))}
         <p className="text-black/80">
           Do not have an account?{" "}
           <Link className="hover:underline text-black" href={"/register"}>
