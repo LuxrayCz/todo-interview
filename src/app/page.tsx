@@ -8,7 +8,7 @@ import { DataTable } from "@/components/TodoTable/DataTable";
 import { column } from "@/components/TodoTable/column";
 import { duration } from "@/lib/helper";
 
-export const TAKE_TODOS = 5;
+const TAKE_TODOS = 5;
 
 async function getTodos(page: string | string[] | undefined) {
   "use server";
